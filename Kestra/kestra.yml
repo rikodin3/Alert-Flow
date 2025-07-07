@@ -1,0 +1,18 @@
+kestra:
+  server:
+    basic-auth:
+      enabled: true
+      users:
+        admin:
+          password: admin
+          name: Admin
+
+  storage:
+    type: local
+    local:
+      base-path: /app/storage
+
+  repository:
+    type: h2
+    h2:
+      path: /app/storage/database.h2.db
